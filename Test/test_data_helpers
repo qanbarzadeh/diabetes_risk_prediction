@@ -1,0 +1,30 @@
+import unittest
+from data_helpers import load_config, load_data
+
+class TestDataHelpers(unittest.TestCase):
+
+    def test_load_config_success(self):
+        """Test loading a valid config file."""
+        config = load_config('path/to/valid/config.json')
+        self.assertIsNotNone(config)
+        self.assertIn('data_path', config)
+
+    def test_load_config_file_not_found(self):
+        """Test loading a non-existent config file."""
+        config = load_config('nonexistent/path/config.json')
+        self.assertIsNone(config)
+
+    def test_load_data_success(self):
+        """Test loading data from a valid file."""
+        data = load_data('path/to/valid/data.csv')
+        self.assertIsNotNone(data)
+        # Add more assertions here based on expected data properties
+
+    def test_load_data_file_not_found(self):
+        """Test loading data from a non-existent file."""
+        data = load_data('nonexistent/path/data.csv')
+        self.assertIsNone(data)
+
+# This allows the tests to be run when the script is executed directly
+if __name__ == '__main__':
+    unittest.main()
