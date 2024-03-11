@@ -1,4 +1,4 @@
 {
-    "data_path": "..//data//raw//diabetes.csv",
-    "processed_data_path": "..//data//processed//diabetes_processed.csv"
+    "data_path": "../data/raw/diabetes.csv",
+    "processed_data_path": "../data/processed/diabetes_processed.csv"
 }
